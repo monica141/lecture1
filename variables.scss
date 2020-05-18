@@ -1,0 +1,49 @@
+/*we set a variable and we can use it for any color code*/
+$color: pink;
+
+ul{
+   font-size: 14px;
+   color: $color;
+}
+
+ol{
+   font-size: 18px;
+   color: $color;
+}
+
+div{
+   font-size: 2opx;
+   /* This applies to any paragraph inside a div*/
+   p{
+      color: blue
+   }
+   ul{
+      color: green;
+   }
+}
+
+
+%message {
+   font-family: sans-serif;
+   font-size: 18px;
+   font-weight: bold;
+   border: 1px solid black;
+   padding: 20x;
+   margin: 20px;
+}
+
+.success{
+   /*inherits from the that information*/
+   @extend %message;
+   background-color: green;
+}
+
+.warning{
+   @extend %message;
+   background-color: orange;
+}
+
+.error{
+   @extend %message;
+   background-color: red;
+}

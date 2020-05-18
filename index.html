@@ -3,6 +3,30 @@
    <head>
       <meta charset="utf-8">
       <title>My Webpage</title>
+
+      <style>
+         button {
+            width: 200px;
+            height: 50px;
+            font-size: 24px;
+            background-color: green;
+         }
+
+         button:hover{
+            background-color: orange;
+         }
+         /*whatever we put will happen before the content we add*/
+         a::before {
+            /*the bellow is a sing from unicode for any sort of emoji*/
+            content:"\21d2 Click here:";
+            font-weight: bold;
+         }
+         /* this reacts as when something is selected that would go in the partifular color or etc..*/
+         p::selection{
+            color: red;
+            background-color: yellow;
+         }
+      </style>
    </head>
    <body>
       LINKS
@@ -29,33 +53,19 @@
          Here goes a paragraph 3
       </p>
 
+      <button>Click Me!!</button>
+
+      <ul>
+         <li><a href="#">one link</a></li>
+         <li><a href="#">two link</a></li>
+         <li><a href="#">aother link</a></li>
+
+      </ul>
+
+      <p> This is for the selection method</p>
       <!-- html ELEMENTS -->
 
       <!--><audio> <video> <datalist-->
 
-      <form>
-         <div>
-            <input type="text" name="name" placeholder="Name">
-            <input type="password" name="password" placeholder="Password">
-         </div>
-
-         <div>
-            Favourite color?
-            <input type="radio" name="color" value="Red">Red
-            <input type="radio" name="color" value="green">Green
-            <input type="radio" name="color" value="blue">blue
-            <input type="radio" name="color" value="other">Other
-         </div>
-
-         <div>
-            <input name="country" list="countries" placeholder="Country">
-            <datalist id="countries">
-               <option value="Afghanistan"></option>
-               <option value="Albania"></option>
-               <option value="Tenerife"></option>
-               <option value="Malaysia"></option>
-            </datalist>
-         </div>
-      </form>
    </body>
 </html>

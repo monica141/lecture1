@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+
+      <meta name="viewport" content="width=devide-width, initial-scale=2.0">
+      <style>
+         /*  when someone tries to print the page the p with the class screens only wont print*/
+         @media print {
+            .screen-only {
+               display: none;
+            }
+         }
+         /* media at least needs to be 500px */
+
+         @media (min-width: 500px) {
+            h1::before {
+               content: "Welcome to my page!";
+            }
+         }
+         /*less than 500*/
+
+         @media (max-width: 499px) {
+               h1::before{
+                  content: "Welcome";
+               }
+         }
+
+         .container {
+            display: flex;
+            flex-wrap: wrap;
+         }
+         /* any div that is child of the container */
+         .container > div {
+            background-color: springgreen;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            width: 200px;
+         }
+
+         .grid {
+            background-color: green;
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            /* how wide the column to be*/
+            grid-template-columns: 200px 200px auto;
+         }
+      </style>
+   </head>
+
+   <body>
+      <p>This is for media queries example</p>
+      <p>this is another paragr</p>
+      <p class="screen-only">This is going to show up only on computer screens</p>
+
+      <h1></h1>
+
+      FLEXBOX
+      <div class="container">
+         <div> A. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> B. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> C. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> D. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> E. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> F. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> G. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> A. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> A. box box box box box box box box box box box box box box box box box box box box </div>
+         <div> A. box box box box box box box box box box box box box box box box box box box box </div>
+      </div>
+
+      <div class="grid">
+         <div class="grid-item">1</div>
+         <div class="grid-item">2</div>
+         <div class="grid-item">3</div>
+         <div class="grid-item">4</div>
+         <div class="grid-item">5</div>
+         <div class="grid-item">6</div>
+         <div class="grid-item">7</div>
+         <div class="grid-item">8</div>
+         <div class="grid-item">9</div>
+         <div class="grid-item">10</div>
+         <div class="grid-item">11</div>
+         <div class="grid-item">12</div>
+      </div>
+
+   </body>
+</html>

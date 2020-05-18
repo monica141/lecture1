@@ -1,0 +1,45 @@
+/*we set a variable and we can use it for any color code*/
+ul {
+  font-size: 14px;
+  color: pink;
+}
+
+ol {
+  font-size: 18px;
+  color: pink;
+}
+
+div {
+  font-size: 2opx;
+  /* This applies to any paragraph inside a div*/
+}
+div p {
+  color: blue;
+}
+div ul {
+  color: green;
+}
+
+.error, .warning, .success {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 20x;
+  margin: 20px;
+}
+
+.success {
+  /*inherits from the that information*/
+  background-color: green;
+}
+
+.warning {
+  background-color: orange;
+}
+
+.error {
+  background-color: red;
+}
+
+/*# sourceMappingURL=variables.css.map */
